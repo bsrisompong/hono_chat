@@ -24,3 +24,7 @@ export interface DBMessage extends DBEntity {
   type: MessageType
   message: string
 }
+
+export type DBCreateUser = Pick<DBUser, 'email' | 'password' | 'name'>
+export type DBCreateChat = Pick<DBChat, 'name' | 'ownerId'>
+export type DBCreateMessage = Pick<DBMessage, 'chatId' | 'message' | 'type'>
